@@ -68,7 +68,7 @@ def read_ip():
 def group_ip(ip_data):
     """Group ip by ip's prefix."""
     ip_data_group = {}
-    for key, group in groupby(ip_data, prefix):
+    for key, group in groupby(sorted(ip_data), prefix):
         ip_data_group[key] = list(group)
     return ip_data_group
 
