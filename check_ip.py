@@ -1,6 +1,7 @@
 # -*- coding: utf8 -*-
 # Cheack_IP.py
 # Author: Jiangmf
+# Date: 2014-07-09
 from MySQLAdapter import *
 
 

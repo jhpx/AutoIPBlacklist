@@ -1,8 +1,10 @@
+# -*- coding: utf8 -*-
+# Cheack_IP.py
+# Author: Jiangmf
+# Date: 2014-07-09
 from itertools import groupby
-# groupby is used as a cluster
 
 # ---- helper functions ---- #
-
 
 def prefix(x):
     """Calculate prefix for a single ip.

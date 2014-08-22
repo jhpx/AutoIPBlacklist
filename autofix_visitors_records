@@ -1,0 +1,5 @@
+#!/bin/sh
+python check_ip.py
+python route_aggregation.py
+python upload.py
+python delete_ip_records.py

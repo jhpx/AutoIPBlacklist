@@ -1,6 +1,7 @@
 # -*- coding: utf8 -*-
 # MySQLAdapter.py
 # Author: Jiangmf
+# Date: 2014-07-09
 import MySQLdb
 import os
 
