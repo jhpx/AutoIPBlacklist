@@ -84,7 +84,7 @@ def calculate(ip_data_group):
 
 def update_blacklist(ip_net_group):
     """Update the file 'blacklist' (overide)."""
-    file = open('blacklist', 'w')
+    file = open('blacklist', 'wb')
     count = 0
     for v in sorted(ip_net_group.values()):
         file.write("Deny from " + v + "\n")

@@ -6,7 +6,7 @@ from MySQLAdapter import *
 
 def sync_csv_file(results):
     """Union update file "st_visitors.csv" by the new ip list in results."""
-    file = open('st_visitors.csv', 'r+')
+    file = open('st_visitors.csv', 'rb+')
     raw = set(file.read().split("\n")[:-1])
     print 'Old st_visitors.csv has %d ip records.' % len(raw)
     results = results.difference(raw)
