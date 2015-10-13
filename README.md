@@ -4,6 +4,7 @@ AutoIPBlacklist
 Generate ip blacklist conf in apache2 format by analysizing the database table of wordpress plugin my-visitors and akismet
 
 Usage:
+	python upload.py
 
 You should create a my.cnf file like this:
 
@@ -22,4 +23,4 @@ You should create a my.cnf file like this:
 
 And you must install openssh to run the command "sftp" and "ssh".
 
-	
+Also your public key must be put in the content of /root/.ssh/authorized_keys in your VPS.
