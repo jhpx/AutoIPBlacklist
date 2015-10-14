@@ -8,14 +8,14 @@ import os
 
 
 class MySQLAdapter(object):
-    default_file = os.path.split(os.path.realpath(__file__))[0] + "\\my.cnf"
+    config = os.path.split(os.path.realpath(__file__))[0] + os.sep +"my.cnf"
 
     @classmethod
     def mysql_select(cls, sql):
 
         try:
             print "Connecting to mysql server..."
-            conn = MySQLdb.connect(read_default_file=cls.default_file)
+            conn = MySQLdb.connect(read_default_file=cls.config)
             cur = conn.cursor()
             count = cur.execute(sql)
 
@@ -32,7 +32,7 @@ class MySQLAdapter(object):
     def mysql_update(cls, sql):
         try:
             print "Connecting to mysql server..."
-            conn = MySQLdb.connect(read_default_file=cls.default_file)
+            conn = MySQLdb.connect(read_default_file=cls.config)
             cur = conn.cursor()
             count = cur.execute(sql)
             conn.commit()
@@ -48,7 +48,7 @@ class MySQLAdapter(object):
     def mysql_update_many(cls, sqls):
         try:
             print "Connecting to mysql server..."
-            conn = MySQLdb.connect(read_default_file=cls.default_file)
+            conn = MySQLdb.connect(read_default_file=cls.config)
             cur = conn.cursor()
             for sql in sqls:
                 count = cur.execute(sql)
@@ -64,9 +64,9 @@ class MySQLAdapter(object):
     @classmethod
     def set_default_file(cls, file="my.cnf", relative=True):
         if(relative):
-            os.path.split(os.path.realpath(__file__))[0] + "\\" + file
+            os.path.split(os.path.realpath(__file__))[0] + os.sep + file
         else:
-            cls.default_file = file
+            cls.config = file
 
 pass
 
