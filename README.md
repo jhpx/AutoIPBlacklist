@@ -4,7 +4,7 @@ AutoIPBlacklist
 Generate ip blacklist conf in apache2 format by analysizing the database table of wordpress plugin my-visitors and akismet
 
 Usage:
-	python upload.py
+	./autofix_visitors_records
 
 You should create a my.cnf file like this:
 

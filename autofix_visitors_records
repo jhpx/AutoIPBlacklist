@@ -1,5 +1,11 @@
 #!/bin/sh
-python check_ip.py
+python check_ip.py || {
+    printf "\nPython script check_ip.py failed"
+    exit
+}
 python route_aggregation.py
-python upload.py
+python upload.py|| {
+    printf "\nPython script upload.py failed"
+    exit
+}
 python delete_ip_records.py
