@@ -15,7 +15,7 @@ You should create a my.cnf file like this:
 	host=your_host_url
 	port=3306_or_other
 
-Usage in server side:
+Usage in client side:
 	./autofix_visitors_records_client
 
 You should create a my.cnf file like this:
